@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    height: 120px;
+}
+
+header {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-down {
+    height: 20px;
+    /* Aumenta la altura según lo que necesites */
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    /* Añade espacio interno */
+}
+
+.menu-izquierda {
+    width: 100%;
+    /* Hace que el contenedor ocupe toda la anchura disponible */
+    display: flex;
+    justify-content: center;
+    /* Centra los enlaces horizontalmente */
+}
+
+.menu-izquierda a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 40px;
+    text-align: center;
+}
+
+.menu-izquierda a:hover {
+    color: red;
+}
+
+.nuevo-contenedor {
+    width: 100%;
+    margin-top: 15px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.nuevo-contenedor a:hover {
+    color: black;
+}
+
+.nuevo-contenedor a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+    display: inline-block;
+}
+
+.menu-container {
+    width: 100%;
+}
+
+.accordion-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border-top: 1px black solid;
+}
+
+.accordion-item:hover {
+    transform: scale(1.05);
+    border: 1px black solid;
+}
+
+.accordion-title {
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-desc {
+    display: none;
+    color: black;
+    height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: bold;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.accordion-title .tab-active {
+    font-size: 30px;
+    pointer-events: visible;
+}
+
+.tab-active .accordion-desc {
+    width: 100%;
+    background-color: goldenrod;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10PX 0;
+}
+
+@media (max-width: 1137px) {
+
+    .menu-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .menu-izquierda {
+        display: none;
+        margin-left: 0;
+
+    }
+
+    .hamburger-icon {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 10px;
+    }
+
+    .hamburger-icon span {
+        background-color: white;
+        width: 100%;
+        height: 6px;
+        display: block;
+        border-radius: 2px;
+    }
+
+    .menu-container.menu-open .menu-izquierda {
+        padding: 20px 0;
+        z-index: 2;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: white;
+        border-radius: 10px;
+        margin: 395PX 0 0 0;
+    }
+
+    .menu-container.menu-open .menu-izquierda a {
+        color: black;
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 830px) {
+
+    menu {
+        height: auto;
+    }
+
+    .menu-up {
+        justify-content: center;
+        height: 120px;
+    }
+
+    .menu-up img {
+        height: 100px;
+    }
+
+    .menu-down {
+        height: 80px;
+    }
+
+    .accordion-title {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    .tab-active .accordion-desc {
+        width: 90%;
+        font-size: 25px;
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    position: fixed; /* Fijar el footer para que no empuje el contenido hacia arriba */
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: red;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center; /* Centra el texto */
+    font-size: 14px;
+    color: #ccc;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px 0;
+}
+**
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 150vh;
+    display: flex;
+}
+  
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px; /* Más alto */
+    position: relative;
+    overflow: hidden;
+    perspective: 1200px; /* Efecto de profundidad */
+}
+
+.carousel {
+    position: relative;
+    width: 400px; /* Más ancho */
+    height: 400px; /* Más alto */
+    transform-style: preserve-3d;
+    animation: rotCarousel 20s linear infinite;
+}
+  .card{
+    width: 80px;
+    height: 100px;
+    background-color: #442222;
+    font-size: 100px;
+    position: absolute;
+    top: 80px;
+    left: 125px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    animation: Carrusel 21s linear infinite;
+  }
+  
+  @keyframes Carrusel {
+    from {
+        transform: rotateY(360deg) translateZ(150px);
+    }
+    to {
+        transform: rotateY(0deg) translateZ(150px);
+    }
+}
+
+  #Corvette {
+    background-image: url(../images/Corvette.JPG);
+
+    background-size: cover;
+  }
+  
+  #Corvette:hover{
+    box-shadow: 0px 0px 10px yellow ;
+  }
+  
+  
+  #Hummer{
+    background-image: url(../images/Hummer.JPG);
+    background-size: cover;
+    animation-delay: 3s;
+  }
+  
+  #Hummer:hover{
+    box-shadow: 0px 0px 10px rgb(225, 0, 255) ;
+  }
+  
+  #Jaguar{
+    background-image: url(../images/Jaguar.jpg);
+    background-size: cover;
+    animation-delay: 6s;
+  }
+  
+  #Jaguar:hover{
+    box-shadow: 0px 0px 10px rgb(0, 102, 255) ;
+  }
+  
+  
+  #Mercedes{
+    background-image: url(../images/mercedes.JPG); 
+    background-size: cover;
+    animation-delay: 9s;
+  }
+  
+  #Mercedes:hover{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0) ;
+  }
+  
+    #Ferrari {
+    background-image: url(../images/Ferrari.jpg);
+    background-size: cover;
+    animation-delay: 12s;
+  }
+  
+  
+  #Ferrari:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 0) ;
+  }
+  
+  #BMW_M4{
+    background-image: url(../images/BMW.JPG);
+    background-size: cover;
+    animation-delay: 15s;
+  }
+  
+  #BMW_M4:hover{
+    box-shadow: 0px 0px 10px rgb(255, 166, 0) ;
+  }
+  
+  #Honda { 
+    background-image: url(../images/Honda.JPG);
+    background-size: cover;
+    animation-delay: 18s;
+  }
+  
+  #Honda:hover{
+    box-shadow: 0px 0px 10px rgb(0, 255, 128) ;
+  }
+  
+  
+  .card h3{
+    color: white;
+    font-size: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 70px;
+    background-color: #ff0000;
+  }
