@@ -223,6 +223,58 @@ header {
     }
 }
 
+  .container-swiper{
+    width: 70%;
+    padding: 20px 100px;
+  }
+  .container-swiper .swiper-container{
+    width: 100%;
+    height: 100%;
+   
+  }
+  .container-swiper .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: start;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
+   
+  }
+  .container-swiper .swiper-slide img{
+     display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  
+  }
+  .container-swiper .swiper-slide .card-description{
+      padding:1rem 1rem;
+        text-align: center
+  }
+  .container-swiper .swiper-slide .card-title,.container .swiper-slide .card-text{
+     margin-bottom: .5rem;
+  }
+  .container-swiper .swiper-slide .card-link{
+     text-align: center;
+     padding-top: 5px;
+    
+  }
+  .container-swiper .swiper-slide .card-link a{
+      text-decoration: none;
+      color: #1d6ce2;
+  }
+  .swiper-button-next{
+      right: 26px !important;
+  }
+  .swiper-button-prev{
+      left: 26px !important;
+  }
+
+
 footer {
     background: #333;
     color: white;
@@ -231,7 +283,7 @@ footer {
 }
 
 .footer-container {
-    position: fixed; /* Fijar el footer para que no empuje el contenido hacia arriba */
+    position: relative; /* Fijar el footer para que no empuje el contenido hacia arriba */
     bottom: 0;
     width: 100%;
     background-color: #333;
