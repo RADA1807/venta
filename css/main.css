@@ -233,7 +233,7 @@ header {
     position: relative; /* Asegura que la paginación no esté ligada a las tarjetas */
 }
 .swiper-container {
-    width: 90%;
+    width: 70%;
     height: auto; /* Permite ajuste automático */
 }
 
@@ -243,7 +243,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px; /* Crea más espacio debajo de las tarjetas */
-    width: 70px;
+    width: 70%;
 }
 .container-swiper .swiper-slide {
  
