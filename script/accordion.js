@@ -2,7 +2,7 @@ console.log('Cargando Acordión');
 
 const dataAccordion = [
     {
-        title: "Ofrecemos promociones diarias",
+        title: "conoce aqui las promociones diarias",
         desc: "Descuento del 5% en autos publicados en las ultimas 24 horas",
     },
    
