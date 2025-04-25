@@ -223,37 +223,45 @@ header {
     }
 }
 
-
 .container-swiper {
-    width: 80%;
+    width: 90%;
+    height: 350px; /* Aumenta la altura para más espacio abajo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mueve las tarjetas hacia arriba */
     padding: 20px 100px;
+    position: relative; /* Asegura que la paginación no esté ligada a las tarjetas */
+}
+.swiper-container {
+    width: 90%;
+    height: auto; /* Permite ajuste automático */
 }
 
-.container-swiper .swiper-container {
-    width: 100%;
-    height: 100%;
-
+.swiper-slide {
+    height: 250px; /* Mantiene el tamaño fijo de las tarjetas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px; /* Crea más espacio debajo de las tarjetas */
+    width: 70px;
 }
-
 .container-swiper .swiper-slide {
+ 
     position: relative;
     text-align: center;
     font-size: 18px;
     background: #fff;
     border-radius: 8px;
-    text-align: start;
-    box-shadow: 3px 3px 10px 0 black;
-
+    box-shadow: 6px 3px 10px 0 black;
+   
 }
 
 .container-swiper .swiper-slide img {
     display: block;
     width: 100%;
     height: 180px;
+    border-radius: 8px;
     object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-
 }
 
 .container-swiper .swiper-slide .card-description {
@@ -277,19 +285,53 @@ header {
     color: red;
 }
 
-.swiper-button-next {
-    right: 26px !important;
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical para que estén alineados */
+    transform: translateY(-50%); /* Centra verticalmente */
     color: red !important;
 }
 
+.swiper-button-next {
+    right: 120px !important; /* Ajusta este valor para moverlo más a la derecha */
+    color: red !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .swiper-button-prev {
     left: 26px !important;
     color: red !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: -30px; /* Baja los puntos más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    opacity: 0.5;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red; /* Azul para destacar */
+    opacity: 1;
 }
 
 
 footer {
-    background: #333;
+    background: fff;
     color: white;
     padding: 20px;
     text-align: center;
